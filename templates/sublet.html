@@ -1,0 +1,136 @@
+{% load static %}
+
+<html>
+    <head>
+         <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      
+      
+      <style>
+        .topnav{
+            background-color: grey;
+            overflow: hidden;
+            position:fixed;
+        }
+        .topnav a{
+            float: left;
+            color: rebeccapurple;
+            text-align: center;
+            padding: 14px 60px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover{
+            background-color: #ddd;
+            color: aqua;
+        }
+        .topnav a.active{
+            background-color: bisque;
+            color: blue;
+        }
+        .inner-footer{
+            bottom:20px;
+            width:100%;
+            margin:0;
+            padding: 0;
+            background-color: DarkSalmon;
+        
+        }
+        
+        .outer-footer{
+            margin:0;
+            bottom:0;
+            width:100%;
+            padding: 0;
+            text-align:  center;
+            color: white;
+            font-size: 18px;
+            background-color: #3f3f3f;
+        }
+        h1{
+            color:orange;
+        }
+        h2{
+            color:blue;
+
+        }
+        p{
+            margin:20px;
+        }
+        .form{
+            padding:20px;
+            position:center;
+        }
+        .bend{
+            background-color:silver;
+        }
+      </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <a  href="{% url 'Home' %}">Home</a>
+            <a href="{% url 'Udrive' %}">U-Drive</a>
+            <a class="active" href="">Sublet</a>
+            <a href="{% url 'Taxcab' %}">TaxiCab</a>
+            <a href="">Accomodation</a>
+            <a href="{% url 'About' %}">About Us</a>
+            <a href="">Contact Us</a>
+        </div>
+        <br>
+        <div class="form">
+            <p>You need to Sublet Your Car?</p>
+            <h1>Apply here for Sublet</h1>
+
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="form-actions">
+                  <button type="submit">Sublet</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="bend">
+            <h2>Condition on Subletting a Car</h2>
+            <hr>
+            <p>When letting your car there are terms and condition must be met:</p>
+            <ul>
+                <li>Make sure that the car you are letiing is insured by verified insurance company.</li>
+                <li>We always rent a car for a minmum of 30 days.</li>
+                <li>We return the car to the owner like the way it was by the time we took it.</li>
+                <li>We meet all the cost the car might incur while in our hands.</li>
+            </ul>
+        </div>
+
+        <div class="last">
+            
+        </div>
+
+        <footer>
+            <div class="inner-footer">
+                <div class="quick-links">
+                    <ul>
+                    <li class="quick-items"><a href="{% url 'Home' %}">Home</a></li>
+                    <li class="quick-items"><a href="{% url 'Udrive' %}">U-Drive</a></li>
+                    <li class="quick-items"><a href="">SubLet</a></li>
+                    <li class="quick-items"><a href="{% url 'Taxcab' %}">TaxiCab</a></li>
+                    <li class="quick-items"><a href="">Accomodation</a></li>
+                    <li class="quick-items"><a href="{% url 'About' %}">About Us</a></li>
+                    <li class="quick-items"><a href="">Contact Us</a></li>
+                    
+                    </ul>
+                </div>
+            </div>
+                
+                <div class="outer-footer">
+                    Copyright &copy;@Abedtati2022 Project <i class="fas fa-copyright    "></i>
+                </div>
+        </footer>
+
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+    </body>
+
+</html>

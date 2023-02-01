@@ -1,0 +1,251 @@
+{% load static %}
+<html>
+    <head>
+         <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+
+
+        <style>
+            
+            .topnav{
+                background-color: grey;
+                overflow: hidden;
+                position:fixed;
+            }
+            .topnav a{
+                float: left;
+                color: rebeccapurple;
+                text-align: center;
+                padding: 14px 60px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            .topnav a:hover{
+                background-color: #ddd;
+                color: aqua;
+            }
+            .topnav a.active{
+                background-color: bisque;
+                color: blue;
+            }
+            .span{
+                color:orange;
+                size:30px;
+            }
+            h1{
+                color:blue;
+                font-size:20px;
+            }
+            h2{
+                color:blue;
+                font-size:20px;
+            }
+            h3{
+                font-size:30px;
+                color:orange;
+            }
+            .move{
+                background-color:white;
+                height:100px;
+
+            }
+
+            .inner-footer{
+                bottom:20px;
+                width:100%;
+                margin:0;
+                padding: 0;
+                background-color: DarkSalmon;
+            
+            }
+            
+            .outer-footer{
+                margin:0;
+                bottom:0;
+                width:100%;
+                padding: 0;
+                text-align:  center;
+                color: white;
+                font-size: 18px;
+                background-color: #3f3f3f;
+            }
+            .container{
+                padding:10px;
+                margin:10px;
+                vertical-align:baseline;
+                height:500px;
+                width:280px;
+                display: inline-block;
+                background-color:white;
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+                
+            }
+            .box{ 
+                width:100%;
+                height:600px;
+                background-color:grey;
+            }
+            .slide{
+                position:center;
+                height:300px;
+                width:500px;
+            }
+            .carousel-inner{
+                margin:10px 10px 10px 480px;
+                height:280px;
+                width:500px;
+                position:center;
+                background-color:white-smoke;
+            }
+            .infor{
+                margin:30px;
+            }
+            .fame{
+                position:center;
+                margin:20px;
+            }
+            .email{
+                height:20px;
+                width:200px;
+                padding:20px;
+                color:orange;
+                background-color:blue;
+            }
+            .map{
+                width:300px;
+                margin:10px;
+            }
+            .column{
+                background-color:orange;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href="#">Home</a>
+            <a href="{% url 'Udrive' %}">U-Drive</a>
+            <a href="{% url 'Sublet' %}">Sublet</a>
+            <a href="{% url 'Taxcab' %}">TaxiCab</a>
+            <a href="">Accomodation</a>
+            <a href="{% url 'About' %}">About Us</a>
+            <a href="">Contact Us</a>
+        </div>
+        <br>
+        <br>
+        <div class="move">
+            <marquee style="height:50px;">Safiri Safely With Us.</marquee>
+            <marquee direction="right"
+            behavior="alternate"
+            style="border:Black 4px Solid">
+            SafeTra for Save Journey
+        </marquee>
+        </div>
+
+        <div class="fame">
+        <h1><b>SafeTra<b></h1>
+            <p>We allow our clients to hire car for self drive for a little token which is negotiable</p>
+            <h2>Tips on U-Drive Service</h2>
+            <p>1. You must have an Identity Card or any document of Identity.</p>
+            <p>2. A valid Driving License and driving experience of more than three months.</p>
+            <p>3. A guranter that will represent you incase of accident.</p>
+        </div>
+        <div class="box">
+        <div class="container">
+            <h1>Car Rental</h1>
+            <img src="{% static 'landcruiser1.jpeg' %}"/>
+            <p>SafeTra rent cars for self drive, also we provide drivers to those are willing at affordable price.
+                types of Vehicle we offer include;
+                <ol>
+                <li>Landrover</li>
+                <li>LandCruiser</li>
+                <li>Toyota-Premio</li>
+                <li>Toyota-Crown</li>
+                <li>Subaru</li>
+                </ol>
+            </p>
+        </div>
+        <div class="container">
+            <h1>Airport Drive</h1>
+            <img src="{% static 'u-drive.jpg' %}"width="280";height="300";/>
+            <p>Being around the Capital city of Kenya,Nairobi we offer Taxi to the Airports ,we make sure our client
+                reach the destination the right time.
+            </p>
+        </div>
+        
+        <div class="container">
+            <h1>Travel Everywhere in Kenya</h1>
+            <img src="{% static 'tour.jpeg' %}"/>
+            <p>SafeTra we make it possible for all Tourist to reach their destinations,we make each and everyone
+                to be comfortable with us.SafeTra Provide Touring vehicle for all in all places all over the Country.
+            </p>
+        </div>
+        <div class="container">
+            <h1>Vacation Trip</h1>
+            <img src="{% static 'trour1.jpg' %}"width="280"/>
+            <p>SafeTra make sure that our client are well sorted while they are in their vacation.<br>
+            We provide all packages required during vacation at a cost that suits our customer.
+        Providing rooms(Rnb) to our clients incase they don't have means.</p>
+        </div>
+        
+        </div>
+        
+            
+            <div class="infor">
+                <h2><b>Travel with Us ,we make the difference<b></h2>
+                    <h3><b>SafeTra Tours and Travel Agency.<b></h3>
+                <p><b>Phone Number:<b> 0759304622</p>
+                    <div class="email">
+                        <p>abedtati1@gmail.com</p>
+                    </div>
+                <p><b>Located At:</b> Kasarani,Seasons</p>
+                <p><b>Openning Days:</b>
+                <ul>
+                    <li><b>Monday</b> To <b>Friday:</b> 08:00am-06:00pm.</li>
+                    <li><b>Saturday:</b>09:00am-05:00pm.</li>
+                    <li><b>Sunday:</b>10:00am-05:00pm.</li>
+                </ul></p>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.915982539449!2d36.90035981413596!3d-1.2185793991111842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f158650580f41%3A0x94e59ec585752208!2sSeasons%20Market!5e0!3m2!1sen!2ske!4v1668321660540!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <div class="column">
+                    <p>infor@gmail.co.ke</p>
+                </div>
+            </div>
+            
+        <footer>
+            <div class="inner-footer">
+                <div class="quick-links">
+                    <ul>
+                    <li class="quick-items"><a href="#">Home</a></li>
+                    <li class="quick-items"><a href="{% url 'Udrive' %}">U-Drive</a></li>
+                    <li class="quick-items"><a href="{% url 'Sublet' %}">SubLet</a></li>
+                    <li class="quick-items"><a href="{% url 'Taxcab' %}">TaxiCab</a></li>
+                    <li class="quick-items"><a href="">Accomodation</a></li>
+                    <li class="quick-items"><a href="{% url 'About' %}">About Us</a></li>
+                    <li class="quick-items"><a href="">Contact Us</a></li>
+                    
+                    </ul>
+                </div>
+            </div>
+                
+                <div class="outer-footer">
+                    Copyright &copy;@Abedtati2022 Project <i class="fas fa-copyright    "></i>
+                </div>
+        </footer>
+
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+    </body>
+</html>
